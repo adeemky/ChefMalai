@@ -1,0 +1,15 @@
+.nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #839192;
+    background-color: #f0f3f4;
+    height: 7rem;
+    gap: 0.3rem;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.10), 1px 1px 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+.logo-img {
+    width: 80px;
+}

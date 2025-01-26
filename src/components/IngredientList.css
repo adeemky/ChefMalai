@@ -1,0 +1,19 @@
+.ingredients-section {
+  font-family: Inter, sans-serif;
+  margin: 30px auto 10px;
+  color: #426b54;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+.ingredients-list {
+  margin-top: 10px;
+}
+
+.ingredients-list > li {
+  color: #354b28;
+  line-height: 30px;
+  /* list-style-type: none */
+}
