@@ -1,11 +1,12 @@
 .ingredients-section {
   font-family: Inter, sans-serif;
   margin: 30px auto 10px;
-  color: #426b54;
+  color: #353c35;
 }
 
 h2 {
   margin-bottom: 0px;
+  color: #557255;
 }
 
 .ingredients-list {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Intro from "./Intro";
 import Recipe from "./Recipe";
 import IngredientList from "./IngredientList";
@@ -7,8 +7,15 @@ import { getRecipeFromChefMalai } from "../ai";
 import "./Main.css";
 
 function Main() {
-  const [ingredients, setIngredients] = React.useState([]);
-  const [recipe, setRecipe] = React.useState(false);
+  const [ingredients, setIngredients] = useState([]);
+  const [recipe, setRecipe] = useState(false);
+  const recipeSection = useRef(null)
+
+  useEffect(() => {
+    if (recipe !== "" && recipeSection.current !== null) {
+      recipeSection.current.scrollIntoView({behavior: "smooth"})
+    }
+  })
 
   async function getRecipe() {
     const recipeMarkdown = await getRecipeFromChefMalai(ingredients);
@@ -40,7 +47,7 @@ function Main() {
         {ingredients.length > 0 && <IngredientList ingredients={ingredients} />}
       </div>
 
-      <GetReciepe handleClick={getRecipe} ingredients={ingredients} />
+      <GetReciepe ref={recipeSection} handleClick={getRecipe} ingredients={ingredients} />
 
       {recipe && <Recipe recipe={recipe} />}
     </main>

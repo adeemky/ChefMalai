@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className='nav'>
             <img className='logo-img' src={logo} />
-            <h1>chef mal<span style={{color: "#2ba360"}}>ai</span></h1>
+            <h1>chef mal<span style={{color: "#557255"}}>ai</span></h1>
         </header>
     )
 }
